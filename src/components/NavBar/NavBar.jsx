@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import "./navbar.css"
 import Brand from "../../../public/assets/netflix-brand.svg"
 import { FaSearch } from "react-icons/fa";
@@ -12,12 +14,12 @@ function NavBar() {
     <>
       <nav className="nav">
         <span>
-          <a href="#">
+          <Link to="/">
             <img src={Brand} alt="Logo da Netflix" />
-          </a>
-          <a href="#">Início</a>
-          <a href="#">Séries</a>
-          <a href="#">Filmes</a>
+          </Link>
+          <Link to="/">Início</Link>
+          <Link to="/series">Séries</Link>
+          <Link to="/movies">Filmes</Link>
         </span>
 
         <a href="#"><FaSearch className="searchIcon" /></a>
