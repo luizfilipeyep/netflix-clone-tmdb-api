@@ -6,6 +6,8 @@ import Series from "./components/Series/Series"
 import Movies from "./components/Movies/Movies"
 import Title from "./components/Title/Title"
 
+// https://api.themoviedb.org/3/movie/848326?api_key=19d258c2ec32a67c20927f058ef1e585&language=pt-BR
+// 
 
 import "./index.css"
 

@@ -8,7 +8,8 @@
 body {
   width: 100vw;
   height: auto;
-  background-color: #fff;
+  background-color: #141414;
+  overflow-x: hidden;
 }
 
 .block {
