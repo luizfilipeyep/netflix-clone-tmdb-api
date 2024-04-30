@@ -5,6 +5,8 @@ import "./home.css"
 
 import { FaPlay } from "react-icons/fa";
 
+import TitleCard from "../../components/TitleCard/TitleCard";
+
 const moviesURL = import.meta.env.VITE_API
 const apiKey = import.meta.env.VITE_API_KEY
 const wallpaperURL = import.meta.env.VITE_WALLPAPER
@@ -35,6 +37,8 @@ function Home() {
           </span>
         </div>
       </section>
+
+      <TitleCard />
       
     </>
    );
