@@ -23,18 +23,6 @@ function Home() {
 
   console.log(topMovies.title)
 
-  // const getTopRatedMovies = async (url) => {
-  //   const res = await fetch(url)
-  //   const data = await res.json
-
-  //   console.log(data)
-  // }
-
-  // useEffect(() => {
-  //   const topRatedUrl = `${moviesURL}top_rated?${apiKey}`
-  //   getTopRatedMovies(topRatedUrl)
-  // }, [])
-
   return ( 
     <> 
       <section className="hero">
