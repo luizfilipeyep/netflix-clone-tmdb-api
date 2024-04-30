@@ -1,27 +1,48 @@
+import axios from "axios";
+import { useState, useEffect } from "react";
+
 import "./titlecard.css"
+
 
 import { FaGreaterThan } from "react-icons/fa";
 
-function TitleCard() {
-  return ( 
+const titleURL = import.meta.env.VITE_API
+const apiKey = import.meta.env.VITE_API_KEY
+const wallpaperURL = import.meta.env.VITE_WALLPAPER
+
+function TitleCard({ tID }) {
+  const titleID = tID
+
+  const [title, setTitle] = useState([])
+
+  useEffect(() => {
+    axios
+      .get(`${titleURL}${titleID}?${apiKey}&language=pt-BR`)
+      .then((response) => {
+        setTitle(response.data)
+      })
+  }, [])
+  
+  console.log(title.title)
+  
+
+  return (
     <>
-      <section className="carousel">
         <div className="card">
           <a href="#">
             <div className="info">
               <h1>
-                Rua do Medo: 1994 - Parte 1
+                {title.title}
                 <span>
                   <FaGreaterThan />
                 </span>
-              </h1>              
+              </h1>
             </div>
-            <img src="https://image.tmdb.org/t/p/original/vu5Y8qFqlzcboDbbZIMTAgj0KLb.jpg" alt="" />
+            <img src={`${wallpaperURL}${title.backdrop_path}`} alt="" />
           </a>
         </div>
-      </section>
     </>
-   );
+  );
 }
 
 export default TitleCard;

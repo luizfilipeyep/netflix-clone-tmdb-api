@@ -6,6 +6,7 @@ import "./home.css"
 import { FaPlay } from "react-icons/fa";
 
 import TitleCard from "../../components/TitleCard/TitleCard";
+import Slider from "../../components/Slider/Slider";
 
 const moviesURL = import.meta.env.VITE_API
 const apiKey = import.meta.env.VITE_API_KEY
@@ -38,7 +39,7 @@ function Home() {
         </div>
       </section>
 
-      <TitleCard />
+      <Slider />
       
     </>
    );
